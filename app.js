@@ -31,7 +31,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.json({ err });
 });
 
 app.listen(process.env.PORT || 3000, () => console.log('Example app listening on port 3000!'));
